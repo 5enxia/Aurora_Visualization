@@ -1,0 +1,20 @@
+Base path: 'C:/Program Files/Unity/Hub/Editor/2019.2.2f1/Editor/Data', plugins path 'C:/Program Files/Unity/Hub/Editor/2019.2.2f1/Editor/Data/PlaybackEngines'
+Cmd: initializeCompiler
+Cmd: compileComputeKernel
+  api=4 insize=2942 outsize=1129 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=3834 outsize=1368 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at NewSolarWind.vfx(155): pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+  api=4 insize=5670 outsize=2636 ok=1
+Cmd: compileComputeKernel
+  error: 1 plat 4 at NewSolarWind.vfx(155): pow(f, e) will not work for negative f, use abs(f) or conditionally handle negative values if you expect them
+  api=4 insize=5670 outsize=2636 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=5359 outsize=1973 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=4790 outsize=1865 ok=1
+Cmd: compileComputeKernel
+  api=4 insize=4943 outsize=1848 ok=1
+
+Quitting shader compiler process
