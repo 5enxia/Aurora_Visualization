@@ -87,7 +87,7 @@ if __name__ == "__main__":
     
     ## File & URL Name
     fn = "Aurora.txt"
-    new_fn = "Aurora.png"
+    new_fn = "Aurora"
     url = 'https://services.swpc.noaa.gov/text/aurora-nowcast-map.txt'
     
     print("Start Scraping")
@@ -111,4 +111,4 @@ if __name__ == "__main__":
             new_image = Image.fromarray(array)
             new_image.save(new_fn + ".png")
             
-            time.sleep(60 * 1)
+        time.sleep(60 * 1)

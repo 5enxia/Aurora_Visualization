@@ -1,4 +1,4 @@
 Traceback (most recent call last):
-  File "Aurora.py", line 103, in <module>
-    array = np.array(pixels,dtype=np.uint8)
-ValueError: setting an array element with a sequence.
+  File ".\Aurora.py", line 114, in <module>
+    time.sleep(60 * 1)
+KeyboardInterrupt
