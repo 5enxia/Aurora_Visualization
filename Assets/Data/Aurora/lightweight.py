@@ -51,6 +51,7 @@ def parse(fn):
         try:
             line = linecache.getline(fn,line_data + j) #Aurora data
             res = re.findall(pattern,line)
+            blanks = list()
             for i in range(col_size):
                 probability = int(res[i])
                 if probability >= 0:
@@ -58,14 +59,24 @@ def parse(fn):
                         alpha = 255
                     else:
                         alpha = 0
-                    blue = 0
+                    blue = j%256
                     green = probability/100 * 255
-                    red = 0
+                    red = j//256
                     color = [red,green,blue,alpha]
                     # print(color)
                     size = len(pixels)
                     pixels.append(list())
                     pixels[size].append(color)
+
+                    # stock blank
+                    blanks.append(probability)
+            
+            # remove blank row
+            blanks = np.array(blanks)
+            if blanks.max() < 1:
+                for i in range(col_size):
+                    pixels.pop()
+                    
         except:
             break
     if(len(pixels) == 0):
@@ -107,7 +118,7 @@ if __name__ == "__main__":
     # fn = os.path.splitext(fn)[0]
 
     fn = "Aurora.txt"
-    new_fn = "Aurora.png"
+    new_fn = sys.argv[1] + ".png"
     url = 'https://services.swpc.noaa.gov/text/aurora-nowcast-map.txt'
     
     print("Start Scraping")

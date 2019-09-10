@@ -1,4 +1,13 @@
 Traceback (most recent call last):
-  File ".\Aurora.py", line 114, in <module>
-    time.sleep(60 * 1)
-KeyboardInterrupt
+  File "C:\Python37\lib\site-packages\PIL\Image.py", line 2068, in save
+    format = EXTENSION[ext]
+KeyError: ''
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File ".\Aurora.py", line 105, in <module>
+    new_image.save(new_fn)
+  File "C:\Python37\lib\site-packages\PIL\Image.py", line 2070, in save
+    raise ValueError("unknown file extension: {}".format(ext))
+ValueError: unknown file extension: 
