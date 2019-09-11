@@ -14,6 +14,8 @@ Shader "Aurora/aurora"
 	{
 		// No culling or depth
 		//Cull Off ZWrite Off ZTest Always
+		Cull Off
+
 		Tags{ "RenderType" = "Opaque" }
 		LOD 200
 
@@ -145,7 +147,7 @@ Shader "Aurora/aurora"
 
 				//vec2 q = fragCoord.xy / iResolution.xy;
 				fixed2 q = (i.uv*_ScreenParams.xy) / _ScreenParams.xy;;
-				fixed2 p = q - 0.5;
+				fixed2 p = q ;
 				//p.x *= iResolution.x / iResolution.y;
 				p.x *= _ScreenParams.x / _ScreenParams.y;
 
@@ -165,13 +167,13 @@ Shader "Aurora/aurora"
 
 				fixed3 col = fixed3(0., 0., 0.);
 				fixed3 brd = rd;
-				float fade = smoothstep(0., 0.01, abs(brd.y))*0.1 + 0.9;
+				float fade = smoothstep(0., 0.01, abs(brd.y))*0.1 + 1.9;
 
-				col = bg(rd)*fade;
+				//col = bg(rd)*fade;
 
 				if (rd.y > 0.) {
 					fixed4 aur = smoothstep(0., 1.5, aurora(ro, rd))*fade;
-					col += stars(rd);
+					//col += stars(rd);
 					col = col*(1. - aur.a) + aur.rgb;
 				}
 	

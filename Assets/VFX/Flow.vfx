@@ -1305,7 +1305,7 @@ VisualEffectResource:
         - m_ExpressionIndex: 25
           m_Value: 0.3
         - m_ExpressionIndex: 30
-          m_Value: 131072
+          m_Value: 4096
       m_Vector2f:
         m_Array: []
       m_Vector3f:
@@ -10854,7 +10854,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 131072
+      m_SerializableObject: 4096
     m_Space: 2147483647
   m_Property:
     name: Rate
